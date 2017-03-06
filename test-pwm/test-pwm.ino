@@ -7,6 +7,7 @@ void setup() {
 
 void loop() {
   for(int i=0 ; i<8 ; i++){
-    analogWrite(9,sine[i]); 
+    int pwmOut = map(sine[i],0,4095,0,255); // Mapping from 0-4095 to 0-255
+    analogWrite(9,pwmOut); 
   }
 }
